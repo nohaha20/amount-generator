@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amount Generator</title>
+</head>
+<body>
+  <h1>Amount Generator</h1>
+  <p>Masukkan jumlah:</p>
+  <input type="number" id="amount" />
+  <button onclick="generate()">Generate</button>
+  <p id="result"></p>
+
+  <script>
+    function generate() {
+      const amount = document.getElementById('amount').value;
+      const result = `Jumlah yang kamu masukkan: ${amount}`;
+      document.getElementById('result').innerText = result;
+    }
+  </script>
+</body>
+</html>
