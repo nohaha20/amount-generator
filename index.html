@@ -34,8 +34,8 @@
 
   <div class="result" id="result1">Click to generate</div>
   <div class="result" id="result2">Click to generate</div>
- <div class="result" id="result2">Click to generate</div>
-   <div class="result" id="result2">Click to generate</div>
+ <div class="result" id="result3">Click to generate</div>
+   <div class="result" id="result4">Click to generate</div>
   
   <script>
     function generateAmounts() {
@@ -44,9 +44,13 @@
 
       const random1 = Math.floor(Math.random() * (max - min + 1)) + min;
       const random2 = Math.floor(Math.random() * (max - min + 1)) + min;
-
+ const random3 = Math.floor(Math.random() * (max - min + 1)) + min;
+       const random4 = Math.floor(Math.random() * (max - min + 1)) + min;
+      
       document.getElementById('result1').textContent = '0.000' + random1;
       document.getElementById('result2').textContent = '0.000' + random2;
+      document.getElementById('result2').textContent = '0.000' + random3;
+      document.getElementById('result2').textContent = '0.000' + random4;
     }
   </script>
 </body>
