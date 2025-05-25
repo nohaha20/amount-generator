@@ -32,10 +32,22 @@
   <h1>Random Amount Generator</h1>
   <button onclick="generateAmounts()">Generate</button>
 
-  <div class="result" id="result1">Click to generate</div>
-  <div class="result" id="result2">Click to generate</div>
- <div class="result" id="result3">Click to generate</div>
-   <div class="result" id="result4">Click to generate</div>
+  <div class="result-container">
+    <div class="result" id="result1">Click to generate</div>
+    <button onclick="copyToClipboard('result1')">Copy</button>
+  </div>
+  <div class="result-container">
+    <div class="result" id="result2">Click to generate</div>
+    <button onclick="copyToClipboard('result2')">Copy</button>
+  </div>
+  <div class="result-container">
+    <div class="result" id="result3">Click to generate</div>
+    <button onclick="copyToClipboard('result3')">Copy</button>
+  </div>
+  <div class="result-container">
+    <div class="result" id="result4">Click to generate</div>
+    <button onclick="copyToClipboard('result4')">Copy</button>
+  </div>
   
   <script>
     function generateAmounts() {
@@ -52,6 +64,12 @@
       document.getElementById('result3').textContent = '0.000' + random3;
       document.getElementById('result4').textContent = '0.000' + random4;
     }
+
+       function copyToClipboard(elementId) {
+      const text = document.getElementById(elementId).textContent;
+      navigator.clipboard.writeText(text)
+        .catch(err => console.error('Copy failed:', err));
+       }
   </script>
 </body>
 </html>
